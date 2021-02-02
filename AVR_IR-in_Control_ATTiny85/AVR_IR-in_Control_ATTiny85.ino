@@ -43,17 +43,20 @@ void loop() {
       delay(26);
       delayMicroseconds(INTERVAL);
     }
-    //wait 5 seconds for it to start
+    //wait 5 seconds for it to start    
     delay(5000);
-    
-    //select NETWORK as input
-    for(int d=0; d<2; d++){
-      sendCommand(INPUT_NETWORK_1);
-      delay(26);
-      delayMicroseconds(INTERVAL);
-      sendCommand(INPUT_NETWORK_2);
-      delay(26);
-      delayMicroseconds(INTERVAL);
+
+    for(int n=0; n<5; n++){   //repeat command to make sure it succeeds
+      //select NETWORK as input
+      for(int d=0; d<2; d++){
+        sendCommand(INPUT_NETWORK_1);
+        delay(26);
+        delayMicroseconds(INTERVAL);
+        sendCommand(INPUT_NETWORK_2);
+        delay(26);
+        delayMicroseconds(INTERVAL);
+      }
+      delay(1000);
     }
   }
   else{
@@ -118,4 +121,3 @@ void sendOneByte(int data){
 ISR(PCINT0_vect){
   //do nothing
 }
-
