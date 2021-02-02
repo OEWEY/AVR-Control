@@ -46,7 +46,7 @@ void loop() {
     //wait 5 seconds for it to start    
     delay(5000);
 
-    for(int n=0; n<5; n++){   //wiederholt, da unzuverlässig
+    for(int n=0; n<5; n++){   //repeat command to make sure it succeeds
       //select NETWORK as input
       for(int d=0; d<2; d++){
         sendCommand(INPUT_NETWORK_1);
