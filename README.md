@@ -7,7 +7,9 @@
 ## Hardware:
 The following components are required:
 - an ATtiny85
-- a NPN transistor such as the BC547
-- a pull-up resistor for the output signal
-- a resistor for limiting the base curreont of the transistor
+- a NPN transistor such as the BC548
+- a 10k pull-up resistor for the output signal (R1)
+- a 2k2 resistor for limiting the base curreont of the transistor (R2)
 - three jumper wires for connecting the Raspberry Pi to the ATtiny board
+- some pin headers
+- a 3.5mm audio jack (mono)
